@@ -1,6 +1,7 @@
 import CTAButton from "@/components/ui/CTAButton";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import FadeIn from "@/components/ui/FadeIn";
+import { INSTAGRAM_DM_URL } from "@/lib/constants";
 
 export default function ClosingMessage() {
   return (
@@ -62,6 +63,7 @@ export default function ClosingMessage() {
         </CTAButton>
         <CTAButton
           variant="secondary"
+          href={INSTAGRAM_DM_URL}
           className="border-cream/50 text-cream hover:bg-cream hover:text-ink"
         >
           話を聞いてから、決める

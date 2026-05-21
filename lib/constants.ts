@@ -8,6 +8,9 @@ export function getFormUrl(): string {
   return process.env.NEXT_PUBLIC_FORM_URL ?? "#";
 }
 
+// 「話を聞いてから決める」用：Instagram DM の直接リンク
+export const INSTAGRAM_DM_URL = "https://ig.me/m/naoki_kaneoya";
+
 export const HERO = {
   copy1: "「なんとなく」を、終わらせる。",
   copy2: "本気で、磨いていく。",
