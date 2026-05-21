@@ -1,6 +1,6 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import FadeIn from "@/components/ui/FadeIn";
-import { FINAL_CHECK_QUESTIONS, FINAL_DETAILS } from "@/lib/constants";
+import { FINAL_CHECK_QUESTIONS, FINAL_CAPACITY } from "@/lib/constants";
 
 export default function FinalCheck() {
   return (
@@ -42,16 +42,13 @@ export default function FinalCheck() {
       </FadeIn>
 
       <FadeIn delay={0.85}>
-        <dl className="mx-auto max-w-xl divide-y divide-ink/10 border-y border-ink/10">
-          {FINAL_DETAILS.map((d) => (
-            <div
-              key={d.label}
-              className="grid grid-cols-[7rem_1fr] gap-4 py-4 text-sm md:grid-cols-[8rem_1fr]"
-            >
-              <dt className="text-earth">{d.label}</dt>
-              <dd className="text-ink">{d.value}</dd>
-            </div>
-          ))}
+        <dl className="mx-auto max-w-xs border-y border-ink/10 py-8 text-center">
+          <dt className="text-xs tracking-widest text-earth">
+            {FINAL_CAPACITY.label}
+          </dt>
+          <dd className="mt-3 font-serif text-3xl text-ink">
+            {FINAL_CAPACITY.value}
+          </dd>
         </dl>
       </FadeIn>
     </SectionWrapper>

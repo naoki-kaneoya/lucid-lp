@@ -148,11 +148,8 @@ export const FINAL_CHECK_QUESTIONS = [
   "その努力を、自分で続けていく覚悟がありますか？",
 ] as const;
 
-export const FINAL_DETAILS = [
-  { label: "対象", value: "Lovegraph専属フォトグラファー" },
-  { label: "定員", value: "最大10名" },
-  { label: "最低継続期間", value: "なし" },
-  { label: "途中退会", value: "申し出た翌月末で退会" },
-  { label: "入会審査", value: "あり" },
-  { label: "募集方法", value: "Slackで一斉告知" },
-] as const;
+// 最終確認セクションで見せる定員情報
+export const FINAL_CAPACITY = {
+  label: "定員",
+  value: "最大10名",
+} as const;
