@@ -1,9 +1,11 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import FadeIn from "@/components/ui/FadeIn";
 import { cn } from "@/lib/cn";
-import { PRICING_PLANS } from "@/lib/constants";
+import { PRICING_PLANS, SHOW_SINGLE_SESSION } from "@/lib/constants";
 
 export default function Pricing() {
+  const plans = PRICING_PLANS.filter((p) => p.published);
+
   return (
     <SectionWrapper variant="cream-light" spacing="loose" containerClassName="max-w-4xl">
       <FadeIn>
@@ -18,8 +20,15 @@ export default function Pricing() {
         </p>
       </FadeIn>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-3">
-        {PRICING_PLANS.map((p, i) => (
+      <div
+        className={cn(
+          "mt-16 grid gap-6",
+          plans.length >= 3
+            ? "md:grid-cols-3"
+            : "mx-auto max-w-2xl md:grid-cols-2"
+        )}
+      >
+        {plans.map((p, i) => (
           <FadeIn key={p.name} delay={i * 0.1}>
             <article
               className={cn(
@@ -70,27 +79,31 @@ export default function Pricing() {
         </div>
       </FadeIn>
 
-      <FadeIn delay={0.55} className="mt-12">
-        <div className="mx-auto max-w-xl">
-          <h3 className="text-center font-serif text-xl text-ink">単発1on1</h3>
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <div className="border border-ink/15 bg-cream px-6 py-6 text-center">
-              <p className="text-sm text-earth">クラス卒業生</p>
-              <p className="mt-3 font-serif text-2xl text-ink">
-                5,500
-                <span className="ml-1 text-sm text-earth">円 / 60分</span>
-              </p>
-            </div>
-            <div className="border border-ink/15 bg-cream px-6 py-6 text-center">
-              <p className="text-sm text-earth">クラス・LUCID非所属</p>
-              <p className="mt-3 font-serif text-2xl text-ink">
-                11,000
-                <span className="ml-1 text-sm text-earth">円 / 60分</span>
-              </p>
+      {SHOW_SINGLE_SESSION && (
+        <FadeIn delay={0.55} className="mt-12">
+          <div className="mx-auto max-w-xl">
+            <h3 className="text-center font-serif text-xl text-ink">
+              単発1on1
+            </h3>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <div className="border border-ink/15 bg-cream px-6 py-6 text-center">
+                <p className="text-sm text-earth">クラス卒業生</p>
+                <p className="mt-3 font-serif text-2xl text-ink">
+                  5,500
+                  <span className="ml-1 text-sm text-earth">円 / 60分</span>
+                </p>
+              </div>
+              <div className="border border-ink/15 bg-cream px-6 py-6 text-center">
+                <p className="text-sm text-earth">クラス・LUCID非所属</p>
+                <p className="mt-3 font-serif text-2xl text-ink">
+                  11,000
+                  <span className="ml-1 text-sm text-earth">円 / 60分</span>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </FadeIn>
+        </FadeIn>
+      )}
     </SectionWrapper>
   );
 }

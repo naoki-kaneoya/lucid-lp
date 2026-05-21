@@ -111,6 +111,7 @@ export const AUDIENCE_INVITE = [
   "業界全体の質を、自分の手で底上げしたい人",
 ] as const;
 
+// published: false にすると料金カードを非表示にできる（再公開は true に戻すだけ）
 export const PRICING_PLANS = [
   {
     name: "通常プラン",
@@ -118,6 +119,7 @@ export const PRICING_PLANS = [
     unit: "円 / 月",
     note: "LUCID（グループサロン・月額制）",
     featured: false,
+    published: true,
   },
   {
     name: "クラス卒業生プラン",
@@ -125,6 +127,7 @@ export const PRICING_PLANS = [
     unit: "円 / 月",
     note: "クラス1on1卒業生向け",
     featured: false,
+    published: false,
   },
   {
     name: "プレオープン参加感謝プラン",
@@ -132,8 +135,12 @@ export const PRICING_PLANS = [
     unit: "円 / 月",
     note: "先着10名限定",
     featured: true,
+    published: true,
   },
 ] as const;
+
+// 「単発1on1」セクションの表示切り替え（再公開は true に戻すだけ）
+export const SHOW_SINGLE_SESSION = false;
 
 export const FINAL_CHECK_QUESTIONS = [
   "自分の写真を、自分の言葉で語れるようになりたいですか？",
