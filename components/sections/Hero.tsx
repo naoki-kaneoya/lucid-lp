@@ -22,10 +22,10 @@ export default function Hero() {
       />
 
       {/* 可読性のためのスクリム（静謐感を保つため控えめに） */}
-      <div aria-hidden className="absolute inset-0 bg-ink/40" />
+      <div aria-hidden className="absolute inset-0 bg-ink/45" />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-ink/25 via-transparent to-ink/55"
+        className="absolute inset-0 bg-gradient-to-b from-ink/30 via-ink/20 to-ink/55"
       />
 
       <motion.div

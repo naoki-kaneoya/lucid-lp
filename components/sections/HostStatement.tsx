@@ -11,13 +11,13 @@ export default function HostStatement() {
         </h2>
       </FadeIn>
 
-      <FadeIn delay={0.15} className="mx-auto mt-16 max-w-md">
-        <div className="relative aspect-[2/3] w-full overflow-hidden">
+      <FadeIn delay={0.15} className="mx-auto mt-16 max-w-2xl">
+        <div className="relative aspect-[3/2] w-full overflow-hidden">
           <Image
             src="/images/host-work.jpg"
             alt="金親直樹が撮影したウェディング作品"
             fill
-            sizes="(max-width: 768px) 100vw, 28rem"
+            sizes="(max-width: 768px) 100vw, 42rem"
             className="object-cover"
           />
         </div>
