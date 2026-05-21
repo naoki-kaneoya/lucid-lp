@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import FadeIn from "@/components/ui/FadeIn";
 
@@ -11,11 +12,15 @@ export default function HostStatement() {
       </FadeIn>
 
       <FadeIn delay={0.15} className="mx-auto mt-16 max-w-md">
-        <div
-          role="img"
-          aria-label="主宰の作品（プレースホルダー）"
-          className="aspect-[3/4] w-full bg-gradient-to-br from-ink-light/30 via-earth/20 to-cream-dark/40"
-        />
+        <div className="relative aspect-[2/3] w-full overflow-hidden">
+          <Image
+            src="/images/host-work.jpg"
+            alt="金親直樹が撮影したウェディング作品"
+            fill
+            sizes="(max-width: 768px) 100vw, 28rem"
+            className="object-cover"
+          />
+        </div>
       </FadeIn>
 
       <FadeIn delay={0.3} className="mt-16 space-y-6 text-earth">

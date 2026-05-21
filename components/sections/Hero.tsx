@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import CTAButton from "@/components/ui/CTAButton";
 import { HERO } from "@/lib/constants";
@@ -8,24 +9,23 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cream px-6"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 35%, rgba(168, 159, 140, 0.18), transparent 65%)",
-        }}
+      {/* 背景写真 */}
+      <Image
+        src="/images/hero.jpg"
+        alt="湖畔の遊歩道を歩くふたりの前撮り写真"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
       />
+
+      {/* 可読性のためのスクリム（静謐感を保つため控えめに） */}
+      <div aria-hidden className="absolute inset-0 bg-ink/40" />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "linear-gradient(180deg, transparent 95%, rgba(26,42,64,1) 95%)",
-          backgroundSize: "100% 6px",
-        }}
+        className="absolute inset-0 bg-gradient-to-b from-ink/25 via-transparent to-ink/55"
       />
 
       <motion.div
@@ -34,22 +34,24 @@ export default function Hero() {
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         className="relative mx-auto flex max-w-3xl flex-col items-center text-center"
       >
-        <p className="mb-10 font-serif text-2xl tracking-widest text-ink/80">
+        <p className="mb-10 font-serif text-2xl tracking-widest text-cream">
           Lucid
         </p>
 
-        <h1 className="font-serif text-3xl leading-[1.5] text-ink md:text-5xl md:leading-[1.45]">
+        <h1 className="font-serif text-3xl leading-[1.5] text-cream md:text-5xl md:leading-[1.45]">
           {HERO.copy1}
           <br />
           {HERO.copy2}
         </h1>
 
-        <p className="mt-12 text-sm leading-loose text-earth md:text-base">
+        <p className="mt-12 text-sm leading-loose text-cream/85 md:text-base">
           {HERO.description}
         </p>
 
         <div className="mt-14">
-          <CTAButton>{HERO.cta}</CTAButton>
+          <CTAButton className="bg-cream text-ink hover:bg-cream-dark border-cream hover:border-cream-dark">
+            {HERO.cta}
+          </CTAButton>
         </div>
       </motion.div>
 
@@ -58,7 +60,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-ink/40"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-cream/60"
       >
         <svg
           width="20"

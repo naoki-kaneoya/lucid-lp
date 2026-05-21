@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import FadeIn from "@/components/ui/FadeIn";
 
@@ -18,11 +19,15 @@ export default function Profile() {
 
       <FadeIn delay={0.2} className="mt-16">
         <div className="grid items-center gap-10 md:grid-cols-[200px_1fr]">
-          <div
-            role="img"
-            aria-label="主宰ポートレート（プレースホルダー）"
-            className="mx-auto h-48 w-48 rounded-full bg-gradient-to-br from-ink-light/40 via-earth/30 to-cream-dark/50"
-          />
+          <div className="relative mx-auto h-48 w-48 overflow-hidden rounded-full">
+            <Image
+              src="/images/profile.jpg"
+              alt="主宰 金親直樹のポートレート"
+              fill
+              sizes="12rem"
+              className="object-cover"
+            />
+          </div>
           <ul className="space-y-3 text-earth">
             <li>Lovegraphプラチナフォトグラファー</li>
             <li>写真サロン「Lucid」主宰</li>
