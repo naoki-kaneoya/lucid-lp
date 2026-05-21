@@ -153,3 +153,33 @@ export const FINAL_CAPACITY = {
   label: "定員",
   value: "最大10名",
 } as const;
+
+// 主宰プロフィール
+export const PROFILE = {
+  name: "金親 直樹",
+  nameEn: "NAOKI KANEOYA",
+  intro: [
+    "Lovegraphプラチナフォトグラファー",
+    "写真サロン「Lucid」主宰",
+    "関西を拠点に、ウェディング・商業撮影・教育に従事",
+  ],
+  credentials: [
+    "世界遺産・京都二条城 本丸御殿 竣工写真撮影 担当",
+    "サントリー宇治川工場 50周年記念棟 竣工撮影（写真・映像）担当",
+    "岡山村田製作所 工場見学動線 竣工撮影 担当",
+    "象印魔法瓶記念館 竣工撮影 担当",
+    "グランディア芳泉 旅館客室写真・料理写真・採用PVスチール 担当",
+    "2025 EXPO ベナン／クウェートパビリオン 写真・映像を複数回担当",
+    "カンマサスキッド MVスチール 担当",
+    "2024年 ゼクシィ12月号「街撮り特集」写真掲載",
+  ],
+  awards: [
+    "2022年 総合写真展 優秀賞",
+    "2022年 Lovegraph mini journey 秋 ウエディング部門 優秀賞",
+    "2023年 Lovegraph mini journey 春 チャレンジ部門 優秀賞",
+    "2023年 Lovegraph mini journey 夏 最優秀賞（ウエディング）",
+    "2023年 IPA Pro部門 Wedding 佳作",
+    "2023年 Lovegraph mini journey 秋 特別審査員",
+    "2024年 Lovegraph journey 2024 年間特別賞",
+  ],
+} as const;
