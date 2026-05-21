@@ -160,6 +160,7 @@ export const PROFILE = {
   nameEn: "NAOKI KANEOYA",
   intro: [
     "Lovegraphプラチナフォトグラファー",
+    "文部科学省後援 フォトマスター検定1級 取得",
     "写真サロン「Lucid」主宰",
     "関西を拠点に、ウェディング・商業撮影・教育に従事",
   ],
